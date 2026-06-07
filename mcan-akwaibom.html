@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCAN Akwa Ibom — Batch B1 2026 Orientation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #1a6b3a;
+    --green-mid: #2d8f52;
+    --green-light: #e8f5ee;
+    --gold: #c8973a;
+    --gold-light: #f7edda;
+    --cream: #faf8f4;
+    --text: #1a1a1a;
+    --text-muted: #5a5a5a;
+    --white: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(26,107,58,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(200,151,58,0.07) 0%, transparent 50%),
+      var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 400px; height: 400px;
+    border: 2px solid rgba(200,151,58,0.15);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: -120px;
+    width: 500px; height: 500px;
+    border: 1.5px solid rgba(26,107,58,0.1);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-light);
+    color: var(--gold);
+    border: 1px solid rgba(200,151,58,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-bottom: 28px;
+  }
+  .badge::before { content: '☽'; font-size: 14px; }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 440px;
+    margin-bottom: 36px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    width: fit-content;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .hero-cta:hover { background: var(--green-mid); transform: translateY(-2px); }
+  .hero-cta::after { content: '↓'; }
+
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(26,107,58,0.12);
+  }
+  .stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 4px; }
+  .stat-val { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--green); }
+
+  .hero-visual {
+    background: linear-gradient(135deg, var(--green) 0%, #0f4524 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.1s ease both;
+  }
+  .hero-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .crescent-icon {
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 24px;
+    opacity: 0.9;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .hero-visual h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero-visual p {
+    color: rgba(255,255,255,0.65);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 300px;
+  }
+
+  .camp-notice {
+    margin-top: 28px;
+    background: rgba(200,151,58,0.15);
+    border: 1px solid rgba(200,151,58,0.3);
+    border-radius: 10px;
+    padding: 14px 20px;
+    text-align: center;
+    max-width: 280px;
+  }
+  .camp-notice strong { color: var(--gold); font-size: 13px; display: block; margin-bottom: 4px; }
+  .camp-notice span { color: rgba(255,255,255,0.65); font-size: 12px; line-height: 1.5; }
+
+  .nysc-tag {
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-transform: uppercase;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 100px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 20px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 56px;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    line-height: 1.85;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .pillar {
+    background: white;
+    border: 1px solid rgba(26,107,58,0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .pillar:hover {
+    border-color: rgba(26,107,58,0.25);
+    box-shadow: 0 4px 20px rgba(26,107,58,0.06);
+  }
+
+  .pillar-icon { font-size: 26px; margin-bottom: 10px; }
+  .pillar h4 { font-weight: 500; font-size: 14px; color: var(--green); margin-bottom: 4px; }
+  .pillar p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── FORM ── */
+  .form-section {
+    background: white;
+    padding: 100px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 5px;
+    background: linear-gradient(90deg, var(--green), var(--gold), var(--green));
+  }
+
+  .form-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .form-intro p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .form-benefits { list-style: none; }
+  .form-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .form-benefits li::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    background: var(--green-light);
+    color: var(--green);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  /* form group headings */
+  .form-group-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 14px 0 6px;
+    border-top: 1px solid rgba(26,107,58,0.08);
+    margin-top: 4px;
+  }
+  .form-group-label:first-child { border-top: none; padding-top: 0; }
+
+  form { display: flex; flex-direction: column; gap: 14px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field label { font-size: 12.5px; font-weight: 500; color: var(--text); }
+
+  .field input,
+  .field select,
+  .field textarea {
+    background: var(--cream);
+    border: 1.5px solid rgba(26,107,58,0.15);
+    border-radius: 8px;
+    padding: 11px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-color: var(--green);
+    background: white;
+  }
+  .field select { appearance: none; cursor: pointer; }
+  .field textarea { resize: vertical; min-height: 75px; }
+
+  .field input.error,
+  .field select.error { border-color: #c0392b; }
+  .field-hint { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  .submit-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  /* ── SUCCESS ── */
+  .success-card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 32px;
+    background: var(--green-light);
+    border: 1px solid rgba(26,107,58,0.2);
+    border-radius: 16px;
+    gap: 14px;
+  }
+  .success-card.show { display: flex; }
+  .success-icon { font-size: 56px; }
+  .success-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--green);
+  }
+  .success-card p { color: var(--text-muted); font-size: 14px; line-height: 1.7; max-width: 380px; }
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .whatsapp-btn:hover { background: #1ebe59; transform: translateY(-2px); }
+
+  /* ── UPDATES ── */
+  .updates {
+    padding: 100px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .updates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .update-card {
+    background: white;
+    border: 1px solid rgba(26,107,58,0.1);
+    border-radius: 14px;
+    padding: 28px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .update-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--gold);
+  }
+  .update-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(26,107,58,0.08);
+  }
+
+  .update-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .update-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .update-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--green);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer strong { color: white; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-12px); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-content { padding: 60px 28px 48px; }
+    .hero-visual { padding: 60px 28px; min-height: 320px; }
+    .about { padding: 60px 28px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-section { padding: 60px 28px; }
+    .form-wrapper { grid-template-columns: 1fr; gap: 48px; }
+    .updates { padding: 60px 28px; }
+    .updates-grid { grid-template-columns: 1fr; }
+    .form-row, .form-row-3 { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr 1fr; }
+    .hero-stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="badge">MCAN Akwa Ibom · Orientation Camp</div>
+
+    <h1>Welcome to<br>Camp, <span>Fellow<br>Muslim.</span></h1>
+
+    <p class="hero-sub">
+      As-salāmu ʿalaykum wa-raḥmatullāhi wa-barakātuh 🌙<br><br>
+      You've arrived in the Land of Promise. The 21-day orientation camp can be a lot — but you don't have to navigate it alone. MCAN Akwa Ibom is your family here. Register below and let us find you.
+    </p>
+
+    <a href="#register" class="hero-cta">Register with MCAN</a>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-label">Batch</div>
+        <div class="stat-val">B1 2026</div>
+      </div>
+      <div>
+        <div class="stat-label">State</div>
+        <div class="stat-val">Akwa Ibom</div>
+      </div>
+      <div>
+        <div class="stat-label">Camp</div>
+        <div class="stat-val">21 Days</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="crescent-icon">☪️</div>
+    <h2>Muslim Corpers<br>Association of Nigeria</h2>
+    <p>Uniting Muslim corps members in service, learning, and devotion to Allah — wherever the NYSC posts us.</p>
+
+    <div class="camp-notice">
+      <strong>🏕️ Orientation Camp — Active</strong>
+      <span>Register now to connect with Muslim corpers at camp and get all prayer &amp; event updates.</span>
+    </div>
+
+    <div class="nysc-tag">Akwa Ibom · Batch B1 · 2026</div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <p class="section-eyebrow">Who We Are</p>
+  <h2 class="section-title">What is MCAN?</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        The <strong>Muslim Corpers' Association of Nigeria (MCAN)</strong> is the official body uniting all Muslim NYSC corps members across every state in Nigeria. We provide spiritual, social, and professional support throughout your service year — starting from Day 1 at camp.
+      </p>
+      <p>
+        In Akwa Ibom State, MCAN is active across the orientation camp and throughout the state. From the moment you register, we connect you with your fellow Muslim corpers, ensure you know where Salah is held, and keep you informed of every activity that matters.
+      </p>
+      <p>
+        We organise congregational prayers, Islamic lectures, da'wah activities, social welfare programs, skill acquisition workshops, and community bonding events — keeping your iman strong through camp and beyond.
+      </p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🕌</div>
+        <h4>Congregational Salah</h4>
+        <p>Coordinated prayers and Jumu'ah at camp and across the state.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🤝</div>
+        <h4>Brotherhood & Sisterhood</h4>
+        <p>A tight-knit community of Muslim corpers from Day 1.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📢</div>
+        <h4>Da'wah & Outreach</h4>
+        <p>Sharing the beauty of Islam through service and engagement.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">💼</div>
+        <h4>Career & Skills</h4>
+        <p>Workshops and networking to build your future beyond camp.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏥</div>
+        <h4>Welfare Support</h4>
+        <p>Assistance programs ensuring no corper is left behind.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📖</div>
+        <h4>Islamic Learning</h4>
+        <p>Regular lectures and Qur'an circles to nourish your faith.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REGISTRATION FORM ── -->
+<section class="form-section" id="register">
+  <div class="form-wrapper">
+    <div class="form-intro">
+      <p class="section-eyebrow">Join MCAN</p>
+      <h2 class="section-title">Register at<br>Orientation Camp</h2>
+      <p>
+        Fill in the form to officially join MCAN Akwa Ibom for your Batch B1 2026 service year. This helps us locate you at camp, connect you with your fellow Muslim corpers, and keep you in the loop on all activities.
+      </p>
+      <ul class="form-benefits">
+        <li>Get connected with Muslim corpers at camp immediately</li>
+        <li>Know exactly where and when Salah is held at camp</li>
+        <li>Receive the WhatsApp group link after registration</li>
+        <li>Get welfare, spiritual, and professional support</li>
+        <li>Stay updated on MCAN events throughout your service year</li>
+      </ul>
+    </div>
+
+    <div>
+      <form id="mcanForm" novalidate>
+
+        <!-- Personal Info -->
+        <div class="form-group-label">Personal Information</div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="surname">Surname *</label>
+            <input type="text" id="surname" placeholder="e.g. Bello" required />
+          </div>
+          <div class="field">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" placeholder="e.g. Fatimah" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="otherName">Other Name(s)</label>
+          <input type="text" id="otherName" placeholder="Middle name or other names (optional)" />
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="gender">Gender *</label>
+            <select id="gender" required>
+              <option value="" disabled selected>Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="maritalStatus">Marital Status</label>
+            <select id="maritalStatus">
+              <option value="" disabled selected>Select status</option>
+              <option>Single</option>
+              <option>Married</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" />
+          </div>
+          <div class="field">
+            <label for="stateOrigin">State of Origin *</label>
+            <input type="text" id="stateOrigin" placeholder="e.g. Kano State" required />
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="form-group-label">Contact Details</div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="e.g. 08012345678" required />
+          </div>
+          <div class="field">
+            <label for="phone2">Alternate Phone</label>
+            <input type="tel" id="phone2" placeholder="Optional second number" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="your@email.com" required />
+        </div>
+
+        <!-- NYSC Details -->
+        <div class="form-group-label">NYSC Details</div>
+
+        <div class="field">
+          <label for="callupNo">Call-Up Number *</label>
+          <input type="text" id="callupNo" placeholder="e.g. AK/24B/1234" required />
+          <span class="field-hint">Found on your call-up letter</span>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="platoon">Platoon</label>
+            <input type="text" id="platoon" placeholder="e.g. Platoon 5" />
+          </div>
+          <div class="field">
+            <label for="dormitory">Hostel / Room</label>
+            <input type="text" id="dormitory" placeholder="e.g. Block C, Room 12" />
+          </div>
+        </div>
+
+        <!-- Academic -->
+        <div class="form-group-label">Academic Background</div>
+
+        <div class="field">
+          <label for="institution">Institution *</label>
+          <input type="text" id="institution" placeholder="e.g. University of Lagos" required />
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="course">Course of Study *</label>
+            <input type="text" id="course" placeholder="e.g. Computer Science" required />
+          </div>
+          <div class="field">
+            <label for="qualification">Qualification *</label>
+            <select id="qualification" required>
+              <option value="" disabled selected>Select qualification</option>
+              <option>B.Sc</option>
+              <option>B.A</option>
+              <option>B.Tech</option>
+              <option>B.Eng</option>
+              <option>B.Ed</option>
+              <option>B.Pharm</option>
+              <option>MBBS / MBChB</option>
+              <option>LLB</option>
+              <option>HND</option>
+              <option>NCE</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Skills & Extras -->
+        <div class="form-group-label">Skills & Interests</div>
+
+        <div class="field">
+          <label for="skills">Skills / Areas of Interest</label>
+          <input type="text" id="skills" placeholder="e.g. Teaching, Healthcare, Tech, Media, Design..." />
+          <span class="field-hint">Helps us connect you with the right MCAN sub-committees</span>
+        </div>
+
+        <div class="field">
+          <label for="message">Message for the MCAN Exco (optional)</label>
+          <textarea id="message" placeholder="Questions, concerns, or a quick Salam to the team..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Complete Registration ☽
+        </button>
+      </form>
+
+      <div class="success-card" id="successCard">
+        <div class="success-icon">🌙</div>
+        <h3>JazākAllāhu Khayran!</h3>
+        <p>
+          Your registration is complete, and you're officially part of the MCAN Akwa Ibom family — Batch B1 2026. Welcome home. Join the WhatsApp group now to connect with fellow Muslim corpers at camp:
+        </p>
+        <a
+          href="https://chat.whatsapp.com/BN1DDRappOIK6bXxv3kGe7?s=cl&p=i&ilr=4"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-btn"
+        >
+          💬 Join the MCAN WhatsApp Group
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── UPDATES ── -->
+<section class="updates" id="updates">
+  <p class="section-eyebrow">Stay Informed</p>
+  <h2 class="section-title">Camp Updates</h2>
+
+  <div class="updates-grid">
+    <div class="update-card">
+      <div class="update-tag">📣 Announcement</div>
+      <h4>MCAN Welcome Meeting — Batch B1 2026</h4>
+      <p>All Muslim corpers are invited to the official MCAN orientation camp welcome gathering. Time and venue shared on the WhatsApp group immediately after registration.</p>
+    </div>
+    <div class="update-card">
+      <div class="update-tag">🕌 Daily Prayers</div>
+      <h4>Congregational Salah at Camp</h4>
+      <p>MCAN coordinates all five daily prayers and Jumu'ah at the camp mosque. Register now to get exact timings, location, and the Imam's contact details.</p>
+    </div>
+    <div class="update-card">
+      <div class="update-tag">📚 Camp Program</div>
+      <h4>Nightly Islamic Lectures & Halaqah</h4>
+      <p>Every evening at camp, MCAN hosts short lectures and Qur'an study circles. A chance to recharge your iman after the day's activities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p><strong>MCAN — Muslim Corpers' Association of Nigeria</strong></p>
+  <p>Akwa Ibom State Chapter · Batch B1, 2026 · Orientation Camp</p>
+  <p style="margin-top:10px; font-size:12px; opacity:0.55;">"And hold firmly to the rope of Allah all together and do not become divided." — Qur'an 3:103</p>
+</footer>
+
+<script>
+  // ─────────────────────────────────────────────────────────────
+  // STEP: Paste your Google Apps Script Web App URL below
+  // (Follow the setup guide in the README / instructions)
+  // ─────────────────────────────────────────────────────────────
+  const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+
+  document.getElementById('mcanForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Validate required fields
+    const required = ['surname','firstName','gender','stateOrigin','phone','email','callupNo','institution','course','qualification'];
+    let valid = true;
+
+    required.forEach(id => {
+      const el = document.getElementById(id);
+      el.classList.remove('error');
+      if (!el.value.trim()) {
+        el.classList.add('error');
+        valid = false;
+      }
+    });
+
+    if (!valid) {
+      document.querySelector('.field input.error, .field select.error')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    const data = {
+      Timestamp:     new Date().toLocaleString('en-GB'),
+      Surname:       document.getElementById('surname').value.trim(),
+      'First Name':  document.getElementById('firstName').value.trim(),
+      'Other Name':  document.getElementById('otherName').value.trim(),
+      Gender:        document.getElementById('gender').value,
+      'Marital Status': document.getElementById('maritalStatus').value,
+      'Date of Birth':  document.getElementById('dob').value,
+      'State of Origin':document.getElementById('stateOrigin').value.trim(),
+      Phone:         document.getElementById('phone').value.trim(),
+      'Alt Phone':   document.getElementById('phone2').value.trim(),
+      Email:         document.getElementById('email').value.trim(),
+      'Call-Up No.': document.getElementById('callupNo').value.trim(),
+      Platoon:       document.getElementById('platoon').value.trim(),
+      'Hostel/Room': document.getElementById('dormitory').value.trim(),
+      Institution:   document.getElementById('institution').value.trim(),
+      'Course of Study': document.getElementById('course').value.trim(),
+      Qualification: document.getElementById('qualification').value,
+      'Skills/Interests': document.getElementById('skills').value.trim(),
+      Message:       document.getElementById('message').value.trim(),
+    };
+
+    try {
+      // Google Apps Script requires no-cors mode — it still saves the data
+      await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      // Show success (no-cors means we can't read the response, but data is saved)
+      document.getElementById('mcanForm').style.display = 'none';
+      const card = document.getElementById('successCard');
+      card.classList.add('show');
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'Complete Registration ☽';
+      alert('Something went wrong. Please check your connection and try again.');
+      console.error(err);
+    }
+  });
+</script>
+</body>
+</html>

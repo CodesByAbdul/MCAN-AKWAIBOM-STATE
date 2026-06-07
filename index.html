@@ -839,7 +839,7 @@
   // STEP: Paste your Google Apps Script Web App URL below
   // (Follow the setup guide in the README / instructions)
   // ─────────────────────────────────────────────────────────────
-  const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzCXbW-PV_mL3hyndv_BfxOaUa3ZrfG07giBZkiWZvr0_d3Gn8Dg-NSAZc2ehG4qnfqzA/exec';
 
   document.getElementById('mcanForm').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -847,7 +847,6 @@
     // Validate required fields
     const required = ['surname','firstName','gender','stateOrigin','phone','email','callupNo','institution','course','qualification'];
     let valid = true;
-
     required.forEach(id => {
       const el = document.getElementById(id);
       el.classList.remove('error');
